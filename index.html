@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Test Vue</title>
+</head>
+
+<body>
+  <div class="index-container">
+      <index :text="text"/>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+  <script type="module">
+    import Index from "./build/index.js";
+
+    // Vue instance to create the app component
+    new Vue({
+        el: '.index-container',
+        delimiters: ['${', '}'],
+        components: {
+            Index
+        },
+        data() {
+            return {
+                text: "Hello world"
+            };
+        }
+    });
+  </script>
+</body>
+</html>

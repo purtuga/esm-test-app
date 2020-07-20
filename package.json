@@ -1,0 +1,26 @@
+{
+  "name": "test-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@purtuga/esm-webpack-plugin": "^1.2.1",
+    "browser-sync": "^2.26.10",
+    "connect-history-api-fallback": "^1.6.0",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "@amcharts/amcharts4": "^4.9.30"
+  }
+}
