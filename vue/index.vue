@@ -5,6 +5,7 @@
 <script>
 import mixin from "./mixins/mixin.js";
 
+debugger;
 export default {
   name: "index",
   mixins: [mixin]

@@ -3,7 +3,7 @@ const EsmWebpackPlugin = require('@purtuga/esm-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: './vue/index.vue',
+        index: './vue/index.js',
         indexReplica: './vue/indexReplica.vue',
     },
     output: {
@@ -13,6 +13,7 @@ module.exports = {
     },
     mode: 'production',
     optimization: {
+        minimize: false, // For debugging purposes
         splitChunks: {
             automaticNameDelimiter: '~',
             cacheGroups: {

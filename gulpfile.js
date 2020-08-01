@@ -17,10 +17,15 @@ const vueTask = () => {
         .pipe(gulp.dest('./'));
 };
 
+const copyIndexHtml = () => {
+    return gulp.src('./index.html')
+        .pipe(gulp.dest('./build/'));
+};
+
 // Arrow function to mock a server
 const buildServer = cb => {
     browserSync.init({
-        server: './',
+        server: './build/',
         port: 8080,
         host: '0.0.0.0',
         middleware: [historyApiFallback()]
@@ -28,6 +33,6 @@ const buildServer = cb => {
 };
 
 // Default export (development task)
-exports.default = gulp.series(vueTask, buildServer);;
+exports.default = gulp.series(vueTask, copyIndexHtml, buildServer);
 
 /* ////////////////////////////////////////////////////////////////////// */

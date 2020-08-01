@@ -7,26 +7,29 @@
 </head>
 
 <body>
+  <h1>vue Test</h1>
   <div class="index-container">
       <index :text="text"/>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
   <script type="module">
-    import Index from "./build/index.js";
+    import loadIndexComponent from "./index.js";
 
-    // Vue instance to create the app component
-    new Vue({
-        el: '.index-container',
-        delimiters: ['${', '}'],
-        components: {
-            Index
-        },
-        data() {
-            return {
-                text: "Hello world"
-            };
-        }
+    loadIndexComponent().then(Index => {
+      // Vue instance to create the app component
+      new Vue({
+          el: '.index-container',
+          delimiters: ['${', '}'],
+          components: {
+              Index
+          },
+          data() {
+              return {
+                  text: "Hello world"
+              };
+          }
+      });
     });
   </script>
 </body>
